@@ -60,7 +60,7 @@ describe("render()", () => {
 
       export interface IMyContentTypeFields {
         /** Array field */
-        arrayField: (\\"one\\" | \\"of\\" | \\"the\\" | \\"above\\")[]
+        arrayField: (\`one\` | \`of\` | \`the\` | \`above\`)[]
       }
 
       export interface IMyContentType extends Entry<IMyContentTypeFields> {
@@ -72,7 +72,7 @@ describe("render()", () => {
           locale: string
           contentType: {
             sys: {
-              id: \\"myContentType\\"
+              id: \`myContentType\`
               linkType: \\"ContentType\\"
               type: \\"Link\\"
             }
@@ -80,11 +80,11 @@ describe("render()", () => {
         }
       }
 
-      export type CONTENT_TYPE = \\"myContentType\\"
+      export type CONTENT_TYPE = \`myContentType\`
 
-      export type LOCALE_CODE = \\"en-US\\" | \\"pt-BR\\"
+      export type LOCALE_CODE = \`en-US\` | \`pt-BR\`
 
-      export type CONTENTFUL_DEFAULT_LOCALE_CODE = \\"en-US\\"
+      export type CONTENTFUL_DEFAULT_LOCALE_CODE = \`en-US\`
       "
     `)
   })
@@ -130,7 +130,7 @@ describe("render()", () => {
 
       export interface IMyContentTypeFields {
         /** Array field */
-        arrayField: LocalizedField<(\\"one\\" | \\"of\\" | \\"the\\" | \\"above\\")[]>
+        arrayField: LocalizedField<(\`one\` | \`of\` | \`the\` | \`above\`)[]>
       }
 
       export interface IMyContentType extends Entry<IMyContentTypeFields> {
@@ -142,7 +142,7 @@ describe("render()", () => {
           locale: string
           contentType: {
             sys: {
-              id: \\"myContentType\\"
+              id: \`myContentType\`
               linkType: \\"ContentType\\"
               type: \\"Link\\"
             }
@@ -150,11 +150,11 @@ describe("render()", () => {
         }
       }
 
-      export type CONTENT_TYPE = \\"myContentType\\"
+      export type CONTENT_TYPE = \`myContentType\`
 
-      export type LOCALE_CODE = \\"en-US\\" | \\"pt-BR\\"
+      export type LOCALE_CODE = \`en-US\` | \`pt-BR\`
 
-      export type CONTENTFUL_DEFAULT_LOCALE_CODE = \\"en-US\\"
+      export type CONTENTFUL_DEFAULT_LOCALE_CODE = \`en-US\`
 
       export type LocalizedField<T> = Partial<Record<LOCALE_CODE, T>>
 
@@ -193,7 +193,7 @@ describe("render()", () => {
       declare namespace Codegen {
         export interface IMyContentTypeFields {
           /** Array field */
-          arrayField: (\\"one\\" | \\"of\\" | \\"the\\" | \\"above\\")[]
+          arrayField: (\`one\` | \`of\` | \`the\` | \`above\`)[]
         }
 
         export interface IMyContentType extends Entry<IMyContentTypeFields> {
@@ -205,7 +205,7 @@ describe("render()", () => {
             locale: string
             contentType: {
               sys: {
-                id: \\"myContentType\\"
+                id: \`myContentType\`
                 linkType: \\"ContentType\\"
                 type: \\"Link\\"
               }
@@ -213,11 +213,11 @@ describe("render()", () => {
           }
         }
 
-        export type CONTENT_TYPE = \\"myContentType\\"
+        export type CONTENT_TYPE = \`myContentType\`
 
-        export type LOCALE_CODE = \\"en-US\\" | \\"pt-BR\\"
+        export type LOCALE_CODE = \`en-US\` | \`pt-BR\`
 
-        export type CONTENTFUL_DEFAULT_LOCALE_CODE = \\"en-US\\"
+        export type CONTENTFUL_DEFAULT_LOCALE_CODE = \`en-US\`
       }
 
       export as namespace Codegen

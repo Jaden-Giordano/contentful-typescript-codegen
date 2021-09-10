@@ -40,7 +40,7 @@ describe("renderArray()", () => {
     }
 
     expect(renderArray(arrayOfValidatedSymbols)).toMatchInlineSnapshot(
-      `"('one' | 'of' | 'these')[]"`,
+      `"(\`one\` | \`of\` | \`these\`)[]"`,
     )
   })
 

@@ -41,9 +41,14 @@ export default async function render(
 }
 
 function renderAllContentTypes(contentTypes: ContentType[], localization: boolean): string {
-  return contentTypes.map(contentType => renderContentType(contentType, localization)).join("\n\n")
+  return contentTypes
+    .map((contentType) => renderContentType(contentType, localization))
+    .join("\n\n")
 }
 
 function renderAllContentTypeIds(contentTypes: ContentType[]): string {
-  return renderUnion("CONTENT_TYPE", contentTypes.map(contentType => `'${contentType.sys.id}'`))
+  return renderUnion(
+    "CONTENT_TYPE",
+    contentTypes.map((contentType) => `\`${contentType.sys.id}\``),
+  )
 }

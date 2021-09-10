@@ -32,7 +32,7 @@ describe("renderSymbol()", () => {
 
   it("works with strings with validations", () => {
     expect(renderSymbol(stringWithValidations).trim()).toMatchInlineSnapshot(
-      `"'one' | 'or' | 'the' | 'other'"`,
+      `"\`one\` | \`or\` | \`the\` | \`other\`"`,
     )
   })
 })

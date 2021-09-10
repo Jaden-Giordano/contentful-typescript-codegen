@@ -36,8 +36,8 @@ function descriptionComment(description: string | undefined) {
 
 function renderContentTypeFields(fields: Field[], localization: boolean): string {
   return fields
-    .filter(field => !field.omitted)
-    .map<string>(field => {
+    .filter((field) => !field.omitted)
+    .map<string>((field) => {
       const functionMap: Record<FieldType, (field: Field) => string> = {
         Array: renderArray,
         Boolean: renderBoolean,
@@ -67,7 +67,7 @@ function renderSys(sys: Sys) {
       locale: string;
       contentType: {
         sys: {
-          id: '${sys.id}';
+          id: \`${sys.id}\`;
           linkType: 'ContentType';
           type: 'Link';
         }
